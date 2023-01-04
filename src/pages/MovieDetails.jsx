@@ -11,7 +11,7 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: black;
   &.active {
-    color: red;
+    color: violet;
   }
   &:hover {
     color: violet;
@@ -45,7 +45,7 @@ export const MovieDetails = () => {
         })
         .catch(error => setError(error))
       .finally(() => setLoading(false));
-  }, [movieId]);
+  }, [movieId, navigate]);
 
   const handleGoBack = () => {
     navigate("/", { replace: true });

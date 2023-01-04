@@ -5,3 +5,15 @@
 .trendingTitle {
   padding: 10px;
 }
+
+.movieLink {
+  color: black;
+  text-decoration: none;
+}
+
+.movieLink:hover {
+  color: violet;
+  list-style-type: none;
+  text-decoration: underline;
+  
+}

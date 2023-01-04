@@ -1,5 +1,20 @@
 .btnGoBack {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
+  border: none;
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.75);
+  color: white;
+    background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnGoBack:hover {
+  
+  color: white;
+  background-color: violet;
+  
 }
 
 .MovieBlock {
@@ -10,7 +25,8 @@
 .mainMovieBlock {
   display: flex;
   padding: 10px;
-  border-bottom: 1px solid;
+  /* border-bottom: 1px solid; */
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.75);
 }
 
 .mainMovieInfo {
@@ -19,5 +35,6 @@
 
 .additionalInfoBlock {
   padding: 10px;
-  border-bottom: 1px solid;
+  /* border-bottom: 1px solid; */
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.75);
 }

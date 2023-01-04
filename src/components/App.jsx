@@ -16,7 +16,7 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: black;
   &.active {
-    color: red;
+    color: violet;
   }
   &:hover {
     color: violet;

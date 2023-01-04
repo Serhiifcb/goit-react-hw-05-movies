@@ -25,7 +25,7 @@ export const Cast = () => {
         })
         .catch(error => setError(error))
       .finally(() => setLoading(false));
-  }, []);
+  }, [movieId]);
 
   return (
     <>
