@@ -13,7 +13,10 @@
 
 .movieLink:hover {
   color: violet;
-  list-style-type: none;
   text-decoration: underline;
   
+}
+
+.movieItem:hover {
+  list-style-type: none;
 }

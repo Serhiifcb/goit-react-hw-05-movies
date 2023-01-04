@@ -20,7 +20,9 @@ const StyledLink = styled(NavLink)`
   }
   &:hover {
     color: violet;
+    scale: 1.1;
   }
+
 `
 
 export const App = () => {

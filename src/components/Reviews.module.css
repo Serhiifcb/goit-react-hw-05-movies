@@ -1,7 +1,9 @@
 .actor {
+  padding: 5px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  border-bottom: 1px solid;
+  /* border-bottom: 1px solid; */
   margin-top: 10px;
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.75);
 }
