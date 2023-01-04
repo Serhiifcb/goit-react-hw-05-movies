@@ -1,0 +1,10 @@
+.general {
+  font-size: 20px;
+  color: #010101;
+}
+
+.navMenu {
+  /* margin-bottom: 10px; */
+  border-bottom: 1px solid;
+  /* box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.75); */
+}

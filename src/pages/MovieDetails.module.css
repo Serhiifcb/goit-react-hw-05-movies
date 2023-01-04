@@ -1,0 +1,23 @@
+.btnGoBack {
+  margin-bottom: 10px;
+}
+
+.MovieBlock {
+  padding: 10px;
+  
+}
+
+.mainMovieBlock {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+
+.mainMovieInfo {
+  margin-left: 20px;
+}
+
+.additionalInfoBlock {
+  padding: 10px;
+  border-bottom: 1px solid;
+}

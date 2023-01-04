@@ -1,0 +1,12 @@
+.actor {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-bottom: 1px solid;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+/* .actor:not(:last-child) {
+  margin-bottom: 10px;
+} */

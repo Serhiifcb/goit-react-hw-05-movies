@@ -1,0 +1,7 @@
+.actor {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+}
