@@ -40,7 +40,7 @@ export const Reviews = () => {
       {reviews && (
         <ul>
           {reviews.map(review =>
-          (<li key={review.id} className={css.actor}>
+          (<li key={review.id} className={css.review}>
             {reviews &&
               <>
               <p><b>Author: {review.author}</b></p>

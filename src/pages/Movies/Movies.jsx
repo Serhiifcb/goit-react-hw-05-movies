@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import css from './Movies.module.css';
 import { useState } from "react";
 import { Circles } from 'react-loader-spinner'
-import { Searchbar } from "../components/Searchbar";
+import { Searchbar } from "../../components/Searchbar/Searchbar";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 
 export const Movies = () => {
