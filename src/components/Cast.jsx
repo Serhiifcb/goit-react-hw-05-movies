@@ -21,7 +21,6 @@ export const Cast = () => {
         })
         .then(res => {
           setCast(res.cast);
-          console.log(res.cast);
         })
         .catch(error => setError(error))
       .finally(() => setLoading(false));

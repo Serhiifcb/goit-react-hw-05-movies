@@ -1,5 +1,6 @@
 .trendingList {
   padding: 10px;
+  display: inline-block;
 }
 
 .trendingTitle {
@@ -12,7 +13,7 @@
 }
 
 .movieLink:hover {
-  color: violet;
+  color: #5a70ec;
   text-decoration: underline;
   
 }

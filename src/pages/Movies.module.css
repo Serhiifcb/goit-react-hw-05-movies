@@ -1,0 +1,30 @@
+.errorMessage {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.searchList {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.movieLink {
+  color: black;
+  text-decoration: none;
+}
+
+.movieLink:hover {
+  color: #5a70ec;
+  text-decoration: underline;
+
+}
+
+.movieItem:hover {
+  list-style-type: none;
+}

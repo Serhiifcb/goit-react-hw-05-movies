@@ -21,7 +21,6 @@ export const Reviews = () => {
       })
       .then(res => {
         setReviews(res.results);
-        console.log(res.results);
       })
       .catch(error => setError(error))
       .finally(() => setLoading(false));

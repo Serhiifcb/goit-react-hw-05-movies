@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { NavLink, Outlet, useNavigate } from "react-router-dom"
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom"
 import { useParams } from "react-router-dom";
 import { Circles } from 'react-loader-spinner';
 import css from './MovieDetails.module.css';
@@ -11,10 +11,10 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: black;
   &.active {
-    color: violet;
+    color: #3f51b5;
   }
   &:hover {
-    color: violet;
+    color: #3f51b5;
     text-decoration: underline;
   }
 `
@@ -25,6 +25,7 @@ export const MovieDetails = () => {
   const [loading, setLoading] = useState(false);
   const [image, setImage] = useState('');
   const { movieId } = useParams();
+  const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -41,15 +42,10 @@ export const MovieDetails = () => {
         .then(res => {
           setMovie(res);
           setImage(`https://image.tmdb.org/t/p/w500${res.poster_path}`);
-          console.log(res);
         })
         .catch(error => setError(error))
       .finally(() => setLoading(false));
   }, [movieId, navigate]);
-
-  const handleGoBack = () => {
-    navigate("/", { replace: true });
-  }
 
   return (
     <div className={css.MovieBlock}>
@@ -63,9 +59,9 @@ export const MovieDetails = () => {
       {error && <h2>Щось пішло не так. Немає відповіді на Ваш пошуковий запит</h2>}
       {movie && (
         <>
-          <button className={css.btnGoBack} onClick={handleGoBack}>{'<< '}Go back</button>
+          <button className={css.btnGoBack} ><NavLink to={location.state.from} className={css.btnLink}>{'<< '}Go back</NavLink></button>
           <div className={css.mainMovieBlock}>
-            <img src={image} alt="movie poster" height='300px' />
+            <img src={image} alt="movie poster" width='300px' />
             <div className={css.mainMovieInfo}>
               <h2>{movie.title} ({movie.release_date.slice(0, 4)})</h2>
               <p>User Score: {Math.round(movie.vote_average * 10)}%</p>
@@ -78,8 +74,8 @@ export const MovieDetails = () => {
           <div className={css.additionalInfoBlock}>
             <h3>Additional information</h3>
             <ul>
-              <li><StyledLink to='cast'>Cast</StyledLink></li>
-              <li><StyledLink to='reviews'>Reviews</StyledLink></li>
+              <li><StyledLink to='cast' state={{from: location.state.from}}>Cast</StyledLink></li>
+              <li><StyledLink to='reviews' state={{from: location.state.from}}>Reviews</StyledLink></li>
             </ul>
           </div>
         </>

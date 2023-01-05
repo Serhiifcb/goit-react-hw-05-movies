@@ -16,15 +16,14 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: black;
   &.active {
-    color: violet;
+    color: #5a70ec;
   }
   &:hover {
-    color: violet;
+    color: #5a70ec;
     scale: 1.1;
   }
 
 `
-
 export const App = () => {
   const [moviesTrends, setMoviesTrends] = useState([]);
   const [error, setError] = useState(null);
@@ -43,7 +42,6 @@ export const App = () => {
         })
         .then(res => {
           setMoviesTrends(res.results);
-          console.log(res.results);
         })
         .catch(error => setError(error))
         .finally(() => setLoading(false));
